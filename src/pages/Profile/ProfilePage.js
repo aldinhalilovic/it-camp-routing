@@ -24,8 +24,23 @@ export default function ProfilePage() {
     fetchUser();
   }, []);
 
+  console.log(user, "USERRR");
+
+  if (!user) {
+    return <h1>Loading....</h1>;
+  }
+
   return (
     <div>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
+      <h1>{user.firstName}</h1>
       <h1>{user.firstName}</h1>
     </div>
   );

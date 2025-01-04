@@ -1,3 +1,4 @@
+import { FormControl, InputLabel, MenuItem, Select } from "@mui/material";
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -22,8 +23,6 @@ export default function HomePage() {
     fetchUsers();
   }, []);
 
-  console.log(users);
-
   return (
     <div
       style={{
@@ -35,6 +34,23 @@ export default function HomePage() {
         justifyContent: "center",
       }}
     >
+      <FormControl fullWidth>
+        <InputLabel id="demo-simple-select-label">Age</InputLabel>
+        <Select
+          labelId="demo-simple-select-label"
+          id="demo-simple-select"
+          // value={age}
+          label="Age"
+          // onChange={handleChange}
+        >
+          {[10, 20, 30].map((age) => (
+            <MenuItem value={age}>{age}</MenuItem>
+          ))}
+          {/* <MenuItem value={10}>10</MenuItem>
+          <MenuItem value={20}>Twenty</MenuItem>
+          <MenuItem value={30}>Thirty</MenuItem> */}
+        </Select>
+      </FormControl>
       {users.map((user) => (
         <div
           key={user.id}
