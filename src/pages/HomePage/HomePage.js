@@ -6,8 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default function HomePage() {
   const navigate = useNavigate();
   const [users, setUsers] = useState([]);
-  const test = 10;
-  console.log(test);
+ 
   const fetchUsers = async () => {
     try {
       const { data } = await axios.get("https://dummyjson.com/users");
